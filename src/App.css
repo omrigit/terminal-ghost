@@ -1,0 +1,122 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  display: grid;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Full width when no widgets */
+.main-content.full-width {
+  grid-template-columns: 1fr;
+}
+
+/* With widgets - landscape layout */
+.main-content.with-widgets {
+  grid-template-columns: 1fr 300px;
+}
+
+.terminal-wrapper {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.widgets-sidebar {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.widgets-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  height: 100%;
+  overflow-y: auto;
+  padding-right: var(--spacing-sm);
+}
+
+/* Portrait/vertical layout */
+@media (orientation: portrait), (max-width: 900px) {
+  .main-content.with-widgets {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+  
+  .widgets-sidebar {
+    max-height: 40vh;
+  }
+  
+  .widgets-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-sm);
+    overflow-y: auto;
+    padding-bottom: var(--spacing-sm);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .main-content {
+    padding: var(--spacing-sm);
+    gap: var(--spacing-sm);
+  }
+  
+  .widgets-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Very tall screens (like phone in portrait) */
+@media (min-height: 800px) and (max-width: 600px) {
+  .main-content.with-widgets {
+    grid-template-rows: 1fr 45vh;
+  }
+  
+  .widgets-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation for page load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.terminal-wrapper {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.widgets-sidebar {
+  animation: fadeInUp 0.5s ease-out 0.1s both;
+}
+
+/* Fullscreen adjustments */
+:fullscreen .app {
+  background: var(--bg-primary);
+}
+
+:fullscreen .controls-bar {
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+:fullscreen .app:hover .controls-bar {
+  opacity: 1;
+}

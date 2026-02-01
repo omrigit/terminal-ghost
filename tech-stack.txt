@@ -1,0 +1,44 @@
+Terminal Ghost - Tech Stack
+===========================
+
+Frontend Framework
+------------------
+- React 19.2.0
+- TypeScript 5.9.3
+
+Build Tool
+----------
+- Vite 7.2.4
+
+State Management
+----------------
+- Zustand 5.0.10 (with persist middleware for localStorage)
+
+Animation
+---------
+- Framer Motion 12.29.2
+
+Styling
+-------
+- CSS Variables for theming
+- CSS Modules / vanilla CSS
+- JetBrains Mono font (Google Fonts)
+
+Development Tools
+-----------------
+- ESLint 9.39.1
+- TypeScript ESLint 8.46.4
+
+Key Features
+------------
+- 8 color themes (Matrix, Cyberpunk, Dracula, Nord, Solarized Light, Retro Amber, Midnight Blue, Forest)
+- 8 fake log generators (npm, pip, docker, git, compile, server, database, ai)
+- Dashboard widgets (Timer, Clock, Progress Ring, CPU Graph, Memory Bar, Network Activity, Stats)
+- Responsive layout (landscape/portrait)
+- Fullscreen mode
+- Persistent settings
+
+Browser Support
+---------------
+- Modern browsers with ES2020+ support
+- Tested on Chrome, Firefox, Safari, Edge

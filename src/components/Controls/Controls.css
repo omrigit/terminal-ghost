@@ -1,0 +1,168 @@
+.controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  gap: var(--spacing-md);
+}
+
+.controls-left,
+.controls-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.controls-center {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+/* Logo/Title */
+.app-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  text-shadow: 0 0 10px var(--glow);
+}
+
+.app-title-icon {
+  font-size: 1.2rem;
+}
+
+/* Timer controls */
+.timer-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.timer-display {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  min-width: 80px;
+  text-align: center;
+}
+
+.timer-display.running {
+  color: var(--accent);
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Buttons */
+.control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  gap: var(--spacing-sm);
+}
+
+.control-btn:hover {
+  background: var(--border);
+  border-color: var(--accent);
+  box-shadow: 0 0 10px var(--glow);
+}
+
+.control-btn.primary {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent);
+}
+
+.control-btn.primary:hover {
+  background: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+}
+
+.control-btn.danger {
+  border-color: var(--error);
+}
+
+.control-btn.danger:hover {
+  background: var(--error);
+  color: var(--bg-primary);
+}
+
+.control-btn-icon {
+  font-size: 1rem;
+}
+
+/* Icon buttons */
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: 1.2rem;
+}
+
+.icon-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--accent);
+  box-shadow: 0 0 10px var(--glow);
+}
+
+/* Status indicator */
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-dim);
+}
+
+.status-dot.active {
+  background: var(--success);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .controls-bar {
+    padding: var(--spacing-sm) var(--spacing-md);
+    flex-wrap: wrap;
+  }
+  
+  .app-title span {
+    display: none;
+  }
+  
+  .control-btn span {
+    display: none;
+  }
+  
+  .timer-display {
+    font-size: 1.2rem;
+  }
+}
