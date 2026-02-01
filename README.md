@@ -82,4 +82,4 @@ export default defineConfig([
 ```
 
 ![App Screenshot](images/main-view.png)
-![App Screenshot](images/theme-and-config.png)
+![App Screenshot](images/themes-and-config.png)
