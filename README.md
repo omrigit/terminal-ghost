@@ -1,10 +1,12 @@
-# terminal-ghost
-Screen saver faking-on screen log printing for MacOS emulating terminal / command line activity with build in themes and widgets
+# Terminal-Ghost
+Screen saver faking on-screen log prints for MacOS. Emulating terminal / command line activity with build in themes and widgets
+Works on both Vertical and standard screens
+Support config adjustment for text size, printing speed, build-in timer and more
+
 
 # Run this using
 - npm run dev                                                                   
 - http://localhost:5173/
-
 
 
 # React + TypeScript + Vite
