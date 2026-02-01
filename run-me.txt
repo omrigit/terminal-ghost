@@ -1,0 +1,169 @@
+================================================================================
+                    TERMINAL GHOST - BEGINNER'S SETUP GUIDE
+================================================================================
+
+This guide will help you run Terminal Ghost on your computer, even if you've
+never used code before. Just follow each step in order!
+
+
+================================================================================
+STEP 1: INSTALL NODE.JS
+================================================================================
+
+Node.js is a program that lets you run JavaScript projects like this one.
+
+1. Open your web browser
+2. Go to: https://nodejs.org
+3. Download the "LTS" version (the button on the left - it says "Recommended")
+4. Run the installer you downloaded
+5. Click "Next" through all the screens and finish the installation
+
+To check if it worked:
+- On Mac: Open "Terminal" (search for it in Spotlight with Cmd+Space)
+- On Windows: Open "Command Prompt" (search for it in the Start menu)
+
+Type this and press Enter:
+   node --version
+
+If you see a version number like "v20.x.x" or higher, you're good!
+
+
+================================================================================
+STEP 2: OPEN THE PROJECT FOLDER IN TERMINAL
+================================================================================
+
+You need to navigate to the project folder in your terminal.
+
+ON MAC:
+-------
+1. Open Terminal (Cmd+Space, type "Terminal", press Enter)
+2. Type "cd " (with a space after it)
+3. Drag the project folder from Finder into the Terminal window
+4. Press Enter
+
+ON WINDOWS:
+-----------
+1. Open File Explorer and go to the project folder
+2. Click in the address bar at the top
+3. Type "cmd" and press Enter
+   (This opens Command Prompt already in the right folder!)
+
+
+================================================================================
+STEP 3: INSTALL PROJECT DEPENDENCIES
+================================================================================
+
+The project needs some extra files to run. We'll download them now.
+
+In your terminal, type this command and press Enter:
+
+   npm install
+
+Wait for it to finish. You'll see a lot of text scrolling by - that's normal!
+When it's done, you'll see your cursor blinking on a new line.
+
+This might take 1-2 minutes depending on your internet speed.
+
+
+================================================================================
+STEP 4: START THE PROJECT
+================================================================================
+
+Now let's run the project! In the same terminal, type:
+
+   npm run dev
+
+You'll see something like:
+
+   VITE v7.x.x  ready in xxx ms
+   
+   ➜  Local:   http://localhost:5173/
+   ➜  Network: use --host to expose
+
+This means the project is running! Don't close this terminal window.
+
+
+================================================================================
+STEP 5: OPEN IN YOUR BROWSER
+================================================================================
+
+1. Open your web browser (Chrome, Firefox, Safari, Edge - any will work)
+
+2. In the address bar, type:
+   
+   http://localhost:5173
+
+3. Press Enter
+
+You should now see Terminal Ghost running in your browser!
+
+
+================================================================================
+USING TERMINAL GHOST
+================================================================================
+
+Once it's running:
+
+- Click anywhere or press any key to open the SETTINGS panel
+- Choose different THEMES (Matrix, Cyberpunk, Dracula, etc.)
+- Select different LOG TYPES (npm, docker, git, database, etc.)
+- Toggle WIDGETS on/off (clock, CPU graph, progress ring, etc.)
+- Click "FULLSCREEN" for the best experience!
+
+To use as a screensaver:
+- Go fullscreen (press F11 or click the Fullscreen button)
+- Let it run and enjoy the fake terminal activity!
+
+
+================================================================================
+STOPPING THE PROJECT
+================================================================================
+
+When you're done:
+
+1. Go back to your terminal window
+2. Press Ctrl+C (hold Ctrl and press C)
+3. This stops the project
+
+
+================================================================================
+RUNNING IT AGAIN LATER
+================================================================================
+
+Next time you want to run Terminal Ghost:
+
+1. Open Terminal/Command Prompt
+2. Navigate to the project folder (see Step 2)
+3. Type: npm run dev
+4. Open http://localhost:5173 in your browser
+
+You DON'T need to run "npm install" again - only the first time!
+
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+"npm is not recognized" or "command not found: npm"
+→ Node.js wasn't installed correctly. Go back to Step 1 and reinstall.
+
+"Cannot find module" errors
+→ Run "npm install" again in the project folder.
+
+Page won't load in browser
+→ Make sure the terminal still shows the project running.
+→ Make sure you typed the address correctly: http://localhost:5173
+
+Port already in use
+→ Another program is using port 5173. Close it, or wait a moment and try again.
+
+
+================================================================================
+NEED MORE HELP?
+================================================================================
+
+If you're stuck, try searching online for:
+- "How to install Node.js on [Mac/Windows]"
+- "How to use Terminal on Mac" or "How to use Command Prompt on Windows"
+
+================================================================================
